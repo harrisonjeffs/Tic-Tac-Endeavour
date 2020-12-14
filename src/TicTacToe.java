@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 /**
  * 
- * The Cheap Man's Tic Tac Toe
+ * Tic Tac Endeavour
  * @author harrisonjeffs
+ * @version 1.0
  *
  */
 
@@ -20,19 +21,16 @@ public class TicTacToe {
 		turn = "X";
 		String winner = null;
 		String author = "harrisonjeffs";
-		String version = "v0.9";
+		String version = "v1.0";
 		populateEmptyBoard();
 
-		System.out.println("The Cheap Man's Tic Tac Toe " + version);
+		System.out.println("Tic Tac Endeavour " + version);
 		System.out.println("by " + author);
 		System.out.println("--------------------------------");
 		System.out.println("                                ");
 		printBoard();
-	//	System.out.println("Who is playing first?");
-	//	Scanner takeTurn = new Scanner(System.in);
-	//	int i = takeTurn.nextInt();
-		System.out.println("X will play first. Enter a slot number to place X in:");	
-//		System.out.println(takeTurn + "will play first. Enter a slot number to place" + takeTurn + " in:");
+		System.out.println("                                ");
+		System.out.println("X will play first. Enter a slot number (1-9) to place X in:");	
 
 		while (winner == null) {
 			int numInput;
@@ -56,17 +54,20 @@ public class TicTacToe {
 				printBoard();
 				winner = checkWinner();
 			} else {
-				System.out.println("Slot already taken. Try again");
+				System.out.println("Slot's already taken champ");
 				continue;
 			}
 		}
 		if (winner.equalsIgnoreCase("draw")) {
+			System.out.println("                                ");
 			System.out.println("No one wins, which means you all lose. Play again!");
 		} else {
-			System.out.println(winner + " wins whoop!");
+			System.out.println("                                ");
+			System.out.println(winner + " wins. Wicked");
 		}
 	}
 
+	//the fun part
 	static String checkWinner() {
 		for (int a = 0; a < 8; a++) {
 			String line = null;
@@ -110,10 +111,12 @@ public class TicTacToe {
 			else if (a == 8) return "draw";
 		}
 
+		System.out.println("                                ");
 		System.out.println(turn + "'s turn; enter a slot number to place " + turn + " in:");
 		return null;
 	}
 
+	// the 'gui' aspect (work in progress)
 	static void printBoard() {
 	
 		System.out.println("| " + board[0] + " | " + board[1] + " | " + board[2] + " |");
