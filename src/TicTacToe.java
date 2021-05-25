@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 
  * Tic Tac Endeavour
  * @author harrisonjeffs
- * @version 1.0
+ * @version 1.001
  *
  */
 
@@ -14,6 +14,8 @@ public class TicTacToe {
 	static Scanner in;
 	static String[] board;
 	static String turn;
+	//static String ANSI_RED = "\u001B[31m";
+	//static String ANSI_BLACK = "\u001B[0m"; //colours, irrelevant until future use
 
 	public static void main(String[] args) {
 		in = new Scanner(System.in);
@@ -23,6 +25,7 @@ public class TicTacToe {
 		String author = "harrisonjeffs";
 		String version = "v1.0";
 		populateEmptyBoard();
+
 
 		System.out.println("Tic Tac Endeavour " + version);
 		System.out.println("by " + author);
@@ -44,6 +47,7 @@ public class TicTacToe {
 				System.out.println("Invalid input. Try again");
 				continue;
 			}
+			
 			if (board[numInput-1].equals(String.valueOf(numInput))) {
 				board[numInput-1] = turn;
 				if (turn.equals("X")) {
@@ -127,9 +131,17 @@ public class TicTacToe {
 	
 	}
 
+	// in time, i should be able to re-use the above assets to make a larger board (etc 4x4) with
+	// the same logic, allowing for games that require more skill
+	
 	static void populateEmptyBoard() {
 		for (int a = 0; a < 9; a++) {
 			board[a] = String.valueOf(a+1);
 		}
 	}
 }
+
+// if i can work out how to randomize selection, i can most likely create an 'artificial' CPU opponent
+// that would simply select a random square that is not yet selected by player (X) 
+// This however would not be truly 'random' as the computer is not thinking logically about placement
+// and would instead just be placing a O at pure random
