@@ -120,7 +120,7 @@ public class TicTacToe {
 		return null;
 	}
 
-	// the 'gui' aspect (work in progress)
+	// the 'gui' (garbage UI) aspect
 	static void printBoard() {
 	
 		System.out.println("| " + board[0] + " | " + board[1] + " | " + board[2] + " |");
