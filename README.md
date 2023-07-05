@@ -1,9 +1,11 @@
 # Tic Tac Endeavour
- A simple tic tac toe game with a twist
+A simple tic tac toe game with a twist
 
 Written in everyone's favourite language, Java
 
-Bear in mind this game is not finished and most likely never will be. Nevertheless, it stands to serve a insight into my skills as a budding Java developer
+--Status--
+
+The game functions as a standard Tic-Tac-Toe game. Get three in a row to win. Painfully simple.
 
 --How To Play--
 
@@ -13,6 +15,9 @@ Bear in mind this game is not finished and most likely never will be. Neverthele
 
 --Ambitions--
 
-- Working CPU opponent
-- Larger grids (4x4, 5x5)
-- "Chaos" mode, the grid expands exponentionally and the game never ends.
+- Working CPU opponent, with difficulty toggle:
+  - Easy: A quick game with no challenge, you will invariably win as the computer makes terrible choices intentionally
+  - Breezy: The casual game with a standard challenge, the CPU will try to win, but not too hard
+  - Sleazy: The CPU will actively try to cheat and undermine your success
+- Larger grids (4x4, 5x5). The rules will shift depending on the size of the board (eg 5x5 will require 5 in a row to win)
+- "Chaos" mode, the grid expands exponentionally and the game never ends. Put your CPU to the test and witness the application take control as you desperately search for the Task Manager.
