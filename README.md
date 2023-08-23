@@ -16,7 +16,7 @@ The game functions as a standard Tic-Tac-Toe game. Get three in a row to win. Pa
 --Ambitions--
 
 - Working CPU opponent, with difficulty toggle:
-  - Easy: A quick game with no challenge, you will invariably win as the computer makes terrible choices intentionally
+  - Too Easy: A quick game with no challenge, you will invariably win as the computer makes terrible choices intentionally
   - Breezy: The casual game with a standard challenge, the CPU will try to win, but not too hard
   - Sleazy: The CPU will actively try to cheat and undermine your success
 - Larger grids (4x4, 5x5). The rules will shift depending on the size of the board (eg 5x5 will require 5 in a row to win)
